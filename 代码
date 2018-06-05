@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_692250_qe488nv5yo06n7b9.css">
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <style>
+        html,
+        body,
+        main,
+        .bgp {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            overflow: hidden;
+        }
+        .bgp {
+            background: no-repeat center url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3874209643,3883009970&fm=27&gp=0.jpg');
+            background-size: cover;
+            filter: blur(1vh)
+        }
+        .main {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+        .sidebar {
+            float: left;
+            margin: 10vh 5vh 0 17vh;
+        }
+        .sidebar .iconfont {
+            color: grey;
+            font-size: 5vh;
+            display: inline-block;
+            margin: 5vh;
+        }
+        .img {
+            height: 47vh;
+            width: 47vh;
+            background: no-repeat center url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3874209643,3883009970&fm=27&gp=0.jpg');
+            background-size: cover;
+        }
+        .footer {
+            position: absolute;
+            height: 25vh;
+            width: 100%;
+            bottom: 0;
+            background: rgba(255, 255, 255, .1);
+        }
+        .move {
+            font-size: 9vh;
+            color: rgba(255, 255, 255, .5);
+            margin: 5vh 5vw 8vh 5vw;
+            width: 10vw;
+            opacity: 0;
+            transition: all 1s;
+        }
+        a:hover {
+            color: white!important;
+            transition: color .7s;
+        }
+        .session:hover {
+            box-shadow: white 0 0 1vh .6vh;
+        }
+        .footer:hover .move {
+            opacity: 1;
+            transition: all 1s;
+        }
+        .icon-left {
+            float: left;
+        }
+        .icon-right {
+            float: right;
+        }
+        .kind {
+            color: white;
+            font-size: 2vh;
+            padding: 1vh;
+            text-align: center;
+            width: 10vw;
+            display: inline-block;
+            background: orange;
+            margin-top: 12vh;
+        }
+        .name {
+            color: white;
+            font-size: 5vh;
+            margin-top: 2vh;
+        }
+        .info {
+            margin-left: 70vh;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .jug {
+            margin-top: 12vh;
+            display: flex;
+            width: 50vw;
+        }
+        .jug .iconfont {
+            color: white;
+            font-size: 3vh;
+            display: inline-block;
+            flex: 1;
+        }
+        .process {
+            position: relative;
+            display: inline-block;
+            width: 40vw;
+            height: 1vh;
+            background: grey;
+            margin-top: 10vh;
+            margin-left: 3vh
+        }
+        .singer,
+        .lyric {
+            color: grey;
+            font-size: 2vh;
+        }
+        a {
+            text-decoration: none;
+        }
+        .choice {
+            display: block;
+            width: 20vh;
+            height: 15vh;
+            background: no-repeat center url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3874209643,3883009970&fm=27&gp=0.jpg');
+            background-size: cover;
+        }
+        .session {
+            display: inline-block;
+            padding: 0;
+            margin: 3vh 3vh 4vh 3vh;
+            display: inline-block;
+            transition: all .3s;
+        }
+        .discribe {
+            text-align: center;
+            color: grey;
+            font-size: 3vh;
+        }
+        .store {
+            margin: 0 20vw;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 60vw;
+        }
+        
+        @media screen and (max-width:1040px) {
+            .jug {
+                width: 40vw;
+            }
+            .process {
+                width: 30vw;
+            }
+        }
+        .hide {
+            display: none;
+        }
+        #first {
+            margin-left: 20px;
+        }
+        .probar {
+            height: 1vh;
+            background: white;
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="bgp"></div>
+    <div class="main">
+        <div class="sidebar">
+            <div class="img"></div>
+            <div class="btn">
+                <a href="#" class="iconfont icon-left1"></a>
+                <a href="#" class="iconfont icon-stop"></a>
+                <a href="#" class="iconfont icon-right1"></a>
+            </div>
+        </div>
+        <div class="info">
+            <span class="kind">大庄任</span>
+            <p class="name">
+                It's a new day
+            </p>
+            <div class="jug">
+                <span class="iconfont icon-erji">111</span>
+                <span class="iconfont icon-heart1">2222</span>
+                <span class="iconfont icon-THUMB">333</span> 
+            </div>
+            <a href="#" href="#" class="process">
+                <span class="probar"></span>
+            </a>
+            <span class="time">0:00</span>
+            <p class="singer">JERRY</p>
+            <p class="lyric"></p>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <a href="#" class="move  iconfont icon-left"></a>
+        <a href="#" class="move iconfont icon-right"></a>
+        <div class="store">
+            <div class="session" id="first">
+                <a href="#" class="choice"></a>
+                <div class="discribe">新歌榜</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">热歌榜</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">摇滚榜</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">爵士</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">流行</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">欧美金曲榜</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">经典老歌榜</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">情歌对唱榜</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">影视金曲榜</div>
+            </div>
+            <div class="session">
+                <a href="#" class="choice"></a>
+                <div class="discribe">网络歌曲榜</div>
+            </div>
+        </div>
+    </div>
+        
+    <script>
+        var time
+        $('.icon-right').on('click',function(){
+            if(time) return
+            var a = Math.floor($('.store').width() / $('.session').width())
+            var long = -($('.session').length-1) * $('.session').width() 
+            time = setTimeout(function(){
+            if(parseInt($('.session').eq(0).css('margin-left')) <= long ) return time = 0
+            var a = Math.floor($('.store').width() / $('.session').width())
+            var b = a * Math.floor($('.session').width()) 
+            $('.session').eq(0).css('margin-left','-=' + b)
+            console.log(b)
+            time = 0
+            },300)
+        })
+        $('.icon-left').on('click',function(){
+            if(time) return
+            time = setTimeout(function(){
+            if(parseInt($('.session').eq(0).css('margin-left')) >= 20 ) return time = 0
+            var a = Math.floor($('.store').width() / $('.session').width())
+            var b = a *  Math.floor($('.session').width() )
+            $('.session').eq(0).css('margin-left','+=' + b)
+            time = 0
+            },300)
+        })
+        
+        $.getJSON('http://jirenguapi.applinzi.com/fm/getChannels.php')
+        .done(function(ret){
+            for(var i = 0;i < $('.choice').length;i++){
+                $('.choice').eq(i).css('background-image','url(' + ret.channels[i+3].cover_small + ')')  
+            } 
+        }).fail(function(){
+            console.log('error')
+        })   
+
+        var index = 0
+        var isDataArrive = true
+        var audio = new Audio()
+        audio.autoplay
+        function getData(callback,type,index){
+            isDataArrive = false
+            $.ajax({
+                url:'http://tingapi.ting.baidu.com/v1/restserver/ting',
+                type:'GET',
+                dataType:'jsonp',
+                data:{
+                    method:'baidu.ting.billboard.billList',
+                    format:'json',
+                    from:'webapp_music',
+                    type:type,
+                    size:1,
+                    offset:index
+                }
+            }).done(function(ret){ 
+                console.log(ret)
+                
+                callback(ret.song_list[0])})
+        }    
+        function getSong(callback,number){
+            $.ajax({
+                url:'http://tingapi.ting.baidu.com/v1/restserver/ting',
+                type:'GET',
+                dataType:'jsonp',
+                data:{
+                    method:'baidu.ting.song.play',
+                    songid:number
+                }
+            }).done(function(ret){ 
+                console.log(ret)
+                isDataArrive = true
+                callback(ret.bitrate.show_link)})
+            .fail(function(){isDataArrive = true})
+        }
+        function getLry(callback,number){
+            $.ajax({
+                url:'http://tingapi.ting.baidu.com/v1/restserver/ting',
+                type:'GET',
+                dataType:'jsonp',
+                data:{
+                    method:'baidu.ting.song.lry',
+                    songid:number
+                }
+            }).done(function(ret){ 
+                console.log(ret)
+                callback(ret)})
+        } 
+        function getInfo(type,index){
+            getData(function(info){
+                $('.name').text(info.title)
+                $('.singer').text(info.artist_name)
+                $('.bgp').css({'background-image': 'url('+info.pic_radio+')'})
+                $('.img').css({'background-image': 'url('+info.pic_radio+')'})
+                getSong(function(song){
+                    audio.src=song
+                    audio.play()
+                },info.song_id)
+                getLry(function(ret){
+                    var lrc = ret.lrcContent
+                    var arr = lrc
+                    var obj = {}
+                    arr.split('\n').forEach(function(line){
+                        var times = line.match(/\d{2}:\d{2}/g)
+                        var lyric = line.replace(/\[\d{2}:\d{2}.\d{2}\]/g,'')
+                        obj[times] = lyric
+                        audio.ontimeupdate = function(){
+                            var sec = Math.floor(audio.currentTime % 60)
+                            var min = Math.floor(audio.currentTime / 60)
+                            function second(){
+                                if(sec < 10){return ('0' + Math.floor(audio.currentTime % 60))}
+                                return sec
+                            }
+                            $('.time').text(min + ':' + second())
+                            var a = audio.currentTime/audio.duration
+                            $('.probar').css({'width': Math.floor((audio.currentTime/audio.duration) * 1000)/10 + '%'})
+                            var lyricNow = '0' + min + ':' + second()
+                            $('.lyric').text(obj[lyricNow])
+                        }
+                    })
+                },info.song_id)
+            },type,index)
+        } 
+        
+         
+        function click(type,sessionNum){
+            $('.btn').children().eq(1).addClass('icon-stop').removeClass('icon-start-copy')
+            var index = 0
+            if(!isDataArrive) return
+            getInfo(type,index)
+            $('.kind').text($('.discribe').eq(sessionNum).text())
+
+            $('.btn').children().eq(1).on('click',function(){ 
+                if(!isDataArrive) return
+                if(!audio.paused){
+                    audio.pause()
+                    $('.btn').children().eq(1).removeClass('icon-stop').addClass('icon-start-copy')
+                }
+                else{
+                    audio.play()
+                    $('.btn').children().eq(1).addClass('icon-stop').removeClass('icon-start-copy')
+                }    
+            })
+       
+            $('.icon-left1').on('click',function(){
+                if(!isDataArrive) return
+                if(index <= 0) return
+                $('.btn').children().eq(1).addClass('icon-stop').removeClass('icon-start-copy')
+                index--
+                getInfo(type,index)
+            })
+            $('.icon-right1').on('click',function(){
+                if(!isDataArrive) return
+                $('.btn').children().eq(1).addClass('icon-stop').removeClass('icon-start-copy')
+                index++
+                getInfo(type,index)
+            })
+            $('.process').on('click',function(e){
+                console.log(e)
+            var percent=e.offsetX/parseInt($('.process').width())
+            console.log(percent)
+            audio.currentTime=audio.duration * percent
+        })
+        }
+        
+        $('.choice').eq(0).on('click',function(){
+            click(1,0)
+        })
+        $('.choice').eq(1).on('click',function(){
+            click(2,1)
+        })
+        $('.choice').eq(2).on('click',function(){
+            click(11,2)
+        })
+        $('.choice').eq(3).on('click',function(){
+            click(12,3)
+        })
+        $('.choice').eq(4).on('click',function(){
+            click(16,4)
+        })
+        $('.choice').eq(5).on('click',function(){
+            click(21,5)
+        })
+        $('.choice').eq(6).on('click',function(){
+            click(22,6)
+        })
+        $('.choice').eq(7).on('click',function(){
+            click(23,7)
+        })
+        $('.choice').eq(8).on('click',function(){
+            click(24,8)
+        })
+        $('.choice').eq(9).on('click',function(){
+            click(25,9)
+        })
+        
+  
+        
+    </script>
+</body>
+</html>
