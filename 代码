@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_692250_qe488nv5yo06n7b9.css">
-    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <style>
         html,
         body,
